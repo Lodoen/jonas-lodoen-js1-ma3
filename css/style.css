@@ -1,0 +1,59 @@
+.loading{
+    border: 16px solid #000;
+    border-top: 16px solid #F00;
+    border-radius: 100%;
+    height: 100px;
+    width: 100px;
+    animation: spin 1.5s linear infinite;
+}
+
+.list{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.game, .error{
+    border: 1px solid;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+h1, .error{
+    grid-column: -1/1;
+}
+
+h1{
+    margin-bottom: 0;
+}
+
+h2{
+    margin-top: 0;
+}
+
+p{
+    margin: 10px 0;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+@keyframes spin{
+    0%{transform: rotate(0deg)}
+    100%{transform: rotate(360deg);}
+}
+
+@media (min-width: 500px){
+    .list{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 800px){
+    .list{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
