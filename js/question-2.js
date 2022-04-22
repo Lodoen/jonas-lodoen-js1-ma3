@@ -12,7 +12,7 @@ async function getGames(){
         const results = data.results;
 
         for(let i = 0; i < numberOfGames; i++){
-            let game = results[i];
+            const game = results[i];
 
             let name = "No name given";
             if(game.name){
